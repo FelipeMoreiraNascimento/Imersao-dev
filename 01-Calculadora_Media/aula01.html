@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="aula01.css">
+    <script type="text/javascript" src="aula01.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+      <h1 class="page-title">
+      Calculadora de média</h1>
+      <p class="page-subtitle">
+      Descubra qual a sua média de nota de todas as provas!
+      </p>
+      <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt="">
+    </div>
+    <a href="https://alura.com.br/" target="_blank">
+    <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+    </a>
+    <h1>Desafio Nota e situação</h1>
+    <div class="calcMedia">
+      <p><input type="number" name="txtn1" id="txtn1" placeholder="Nota primeiro bimestre"></p>
+      <p><input type="number" name="txtn2" id="txtn2" placeholder="Nota segundo bimestre"></p>
+      <p><input type="number" name="txtn3" id="txtn3" placeholder="Nota terceiro bimestre"></p>
+      <p><input type="number" name="txtn4" id="txtn4" placeholder="Nota quarto bimestre"></p>
+      <p><input type="button" value="Calcular" onclick="calcular()"></p>
+      <h1 id="res">Resultado</h1>
+      <h2 id="situacao">Situação</h2>
+    </div>
+    
+    <h1>Desafio conversor de Temperatura</h1>
+    <div class="form">
+      <div class="calcTemp">
+        <h3>Selecione o tipo de conversão</h3>
+          <input type="radio" name="temperatura" id="celsius" checked>
+          <label for="celsius">Celsius para Fahrenheit</label><br>
+          <input type="radio" name="temperatura" id="fahrenheit">
+          <label for="fahrenheit">Fahrenheit para celsius</label>
+          <p><input type="number" name="txtn1" id="temp" placeholder="Temperatura"></p>
+          <p><input type="button" value="Converter" onclick="converter()"></p>
+        <h1 id="resultado">Res</h1>
+      </div>
+    </div>
+  </body>
+</html>
