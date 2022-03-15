@@ -25,7 +25,7 @@ function Chutar()
         tentativas.innerHTML = 'Voce tem ' + chances + ' tentativas'
     }
 
-    while (chances > 1) 
+    do
     {
         if (valor == numeroSecreto)
         {
@@ -34,7 +34,7 @@ function Chutar()
         }
         else if(valor > 100 || valor < 0)
         {
-            window.alert('Digite um numero de 0 a 10')
+            window.alert('Digite um numero de 0 a 100')
         }
         else if (valor > numeroSecreto)
         {
@@ -45,9 +45,9 @@ function Chutar()
         {
             resultado.innerHTML = 'O numero secreto eh maior'
             chances--
-        }
-        tentativas.innerHTML = 'Voce tem ' + chances + ' tentativas'
-    }
+        }    
+
+    }while (chances > 0);
 
     numero.innerHTML = 'Obrigado por jogar!!'
 
