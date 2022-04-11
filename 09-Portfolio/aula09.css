@@ -113,9 +113,18 @@ body
 }
 .dark .projetos
 {
+    background: linear-gradient(
+        90deg,
+        rgb(15, 15, 15) 1%,
+        rgb(10,10,10) 52%,
+        rgb(1,1,1)
+    );
     color: #f6f6f6;
 }
-
+.dark .projetos-list a
+{
+    color: #f6f6f6
+}
 .dark .tema button
 {
     background: #1c1c1c;

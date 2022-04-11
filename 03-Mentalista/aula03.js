@@ -1,9 +1,7 @@
-function Chutar()
+function Comecar()
 {
     var numeroSecreto = parseInt(Math.random() * 100)
-    var valor = parseInt(document.getElementById("valor").value)
     var resultado = document.getElementById('resultado')
-    var numero = document.getElementById('numero')
     var tentativas = document.getElementById('tentativas')
     var chances
     var nivel = document.getElementsByName('nivel')
@@ -25,30 +23,35 @@ function Chutar()
         tentativas.innerHTML = 'Voce tem ' + chances + ' tentativas'
     }
 
-    do
+    validaNumeroSecreto(chances, numeroSecreto, resultado)
+}
+
+function validaNumeroSecreto(chances, numeroSecreto, resultado)
+{
+    Chutar()
+    while (chances > 0)
     {
-        if (valor == numeroSecreto)
+        if (Chutar() == numeroSecreto)
         {
             resultado.innerHTML = 'Você acertou, o numero secreto eh ' + numeroSecreto
             break
         }
-        else if(valor > 100 || valor < 0)
-        {
-            window.alert('Digite um numero de 0 a 100')
-        }
-        else if (valor > numeroSecreto)
+        else if (Chutar() > numeroSecreto)
         {
             resultado.innerHTML = 'O numero secreto eh menor'
-            chances--
+            chances--;
         }
         else
         {
             resultado.innerHTML = 'O numero secreto eh maior'
-            chances--
-        }    
+            chances--;
+        } 
+        Chutar()
+    }
+}
 
-    }while (chances > 0);
-
-    numero.innerHTML = 'Obrigado por jogar!!'
-
+function Chutar()
+{
+    var chute = document.getElementById('chute').value
+    return chute;
 }
